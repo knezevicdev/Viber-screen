@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'bitstream_vera_sansroman';
+    src: url('Vera-webfont.eot');
+    src: url('Vera-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Vera-webfont.woff2') format('woff2'),
+         url('Vera-webfont.woff') format('woff'),
+         url('Vera-webfont.ttf') format('truetype'),
+         url('Vera-webfont.svg#bitstream_vera_sansroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#screen {
+  height: 800px;
+  width: 480px;
+  background-color: #1E1E1E;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#android-info {
+  height: 39px;
+}
+
+#top {
+  height: 86px;
+  background-color: #665CAC;
+  position: relative;
+}
+
+#name {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 29px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 93px;
+}
+
+#chat {
+  height: 549px;
+  background-color: #DEDFE1;
+  padding: 10px 10px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#bottom {
+  height: 126px;
+  background-color: #FFFFFF;
+  background-image: url("../images/bottom.png");
+}
+
+#actions {
+  float: right;
+}
+
+#info {
+  float: right;
+}
+
+body {
+  background-color: #0E0E0E;
+  font-family: "bitstream_vera_sansroman";
+}
+
+.message-block {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.image {
+  height: 61px;
+  width: 61px;
+  background-size: cover;
+  border-radius: 25px;
+  position: absolute;
+}
+
+.me .image {
+  background-image: url("../images/me.jpg");
+  right: 0;
+}
+
+.you .image {
+  background-image: url("../images/you.jpg");
+  left: 0;
+}
+
+.you .time {
+  color: #959595;
+}
+
+.me .time {
+  color: #698793;
+}
+
+.time {
+  font-size: 17px;
+  margin-left: 10px;
+  float: right;
+}
+
+.message {
+  margin: 0 69px;
+  padding: 20px 20px;
+  border-radius: 25px;
+  max-width: 294px;
+  display: inline-block;
+  font-size: 21px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.me {
+  text-align: right;
+}
+
+.message {
+  z-index: 99;
+}
+
+.me .message:after {
+  content:"";
+  position: absolute;
+  height: 15px;
+  width: 20px;
+  top: 0;
+  right: -10px;
+  background-size: cover;
+  background-image: url("../images/arrow-me.jpg");
+  z-index: 90;
+}
+
+.me .message:nth-child(1n+3):after {
+  display: none;
+}
+
+.you .message:after {
+  content:"";
+  position: absolute;
+  height: 15px;
+  width: 20px;
+  top: 0;
+  left: -10px;
+  background-size: cover;
+  background-image: url("../images/arrow-you.jpg");
+  z-index: 90;
+}
+
+.you .message:nth-child(1n+3):after {
+  display: none;
+}
+
+.me .message {
+  background-color: #AFE1F5;
+}
+
+.you .message {
+  background-color: #F9F9F9;
+}
+
+.message .text {
+  max-width: 230px;
+}
+
+span.text {
+  text-align: left;
+}
+
+.text img {
+  width: 25px;
+  position: relative;
+  bottom: -3px;
+}
+
+.clearfix {
+  clear: both;
+}
